@@ -27,9 +27,28 @@
         .btn-primary:hover {
             background-color: #0056b3;
         }
+        .navbar-brand img {
+            height: 40px;
+            margin-right: 10px;
+        }
+        .converter-container {
+            max-width: 400px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
     </style>
 </head>
 <body class="d-flex justify-content-center align-items-center vh-100">
+   <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center">
+               <img src="static/images.png" alt="Logo"> Conversor de Moneda
+            </a>
+        </div>
+    </nav>
+
     <div class="container text-center">
         <h1 class="mb-4">Conversor de Euros a Dólares</h1>
         <form method="post">
@@ -39,7 +58,6 @@
         {% if dollars is not none %}
             <h2 class="mt-4">{{ dollars }} USD</h2>
         {% endif %}
-    </div>
 </body>
 </html>
 
